@@ -64,3 +64,23 @@ for(let file of filenames){
 function removeAll(string, removeData){
     return string.split(removalData).join("");
 }
+
+function addSequence(content){
+    let contentArr = content.split("\n");
+    for(let i=0; i<contentArr.length; i++){
+        contentArr[i] = (i+1)+" "+ contentArr[i];
+    }
+    return contentArr;
+}
+
+function addSequenceTnel(content){
+    let contentArr = content.split("\n");
+    let count = 1;
+    for(let i=0; i<contentArr.length; i++){
+        if(contentArr[i] != ""){
+            contentArr[i] = count + " " + contentArr[i];
+            count++;
+        }
+    }
+    return contentArr;
+}
