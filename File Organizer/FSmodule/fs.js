@@ -1,4 +1,5 @@
 let fs = require('fs');
+let path = require('path');
 // let content = fs.readFileSync('f1.txt');
 // console.log(content + "");
 
@@ -18,8 +19,16 @@ let fs = require('fs');
 // console.log(statusObj.isFile());
 // console.log(statusObj.isDirectory());
 
-let fileArr = fs.readdirSync('D:/Pepcoding/PepC/File Organizer/DIR');
-console.log(fileArr);
+// let fileArr = fs.readdirSync('D:/Pepcoding/PepC/File Organizer/DIR');
+// console.log(fileArr);
+
+let srcPath = 'D:/Pepcoding/PepC/File Organizer/FSmodule/f1.txt';
+let destPath = 'D:/Pepcoding/PepC/File Organizer/FSmodule/f2.txt';
+let toBeCopiedFileName = path.basename(srcPath);
+let dest = path.join('D:/Pepcoding/PepC/File Organizer/DIR', toBeCopiedFileName);
+console.log(dest);
+fs.copyFileSync(srcPath,destPath);
+fs.copyFileSync(srcPath,dest);
 
 
 
