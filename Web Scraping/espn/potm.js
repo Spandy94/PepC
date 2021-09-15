@@ -2,7 +2,7 @@ const cheerio = require('cheerio');
 const request = require('request');
 // const fs = require('fs');
 
-request("https://www.espncricinfo.com/series/ipl-2020-21-1210595/delhi-capitals-vs-mumbai-indians-final-1237181/live-cricket-score");
+request("https://www.espncricinfo.com/series/ipl-2020-21-1210595/delhi-capitals-vs-mumbai-indians-final-1237181/live-cricket-score",requestCallback);
 
 
 function requestCallback(err, res, html){
